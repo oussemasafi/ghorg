@@ -317,6 +317,7 @@ func CloneAllRepos() {
 		appName := getAppNameFromURL(target)
 
 		go func(repoUrl string, branch string) {
+			colorlog.PrintInfo("Bachirou : " + appName)
 
 			repoDir := os.Getenv("GHORG_ABSOLUTE_PATH_TO_CLONE_TO") + args[0] + "_ghorg" + "/" + appName
 
